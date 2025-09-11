@@ -1,0 +1,71 @@
+{
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "test",
+    "project": "pp",
+    "version": 0
+  },
+  "spec": {
+    "display": {
+      "name": "test"
+    },
+    "panels": {
+      "hello": {
+        "kind": "Panel",
+        "spec": {
+          "display": {
+            "name": "hello"
+          },
+          "plugin": {
+            "kind": "TimeSeriesChart",
+            "spec": {}
+          },
+          "queries": [
+            {
+              "kind": "TimeSeriesQuery",
+              "spec": {
+                "plugin": {
+                  "kind": "PrometheusTimeSeriesQuery",
+                  "spec": {
+                    "query": "prometheus_http_requests_total",
+                    "datasource": {
+                      "kind": "PrometheusDatasource",
+                      "name": "global-ds-proxy"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "layouts": [
+      {
+        "kind": "Grid",
+        "spec": {
+          "display": {
+            "title": "Panel Group",
+            "collapse": {
+              "open": true
+            }
+          },
+          "items": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 12,
+              "height": 6,
+              "content": {
+                "$ref": "#/spec/panels/hello"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "variables": [],
+    "duration": "1h",
+    "refreshInterval": "0s"
+  }
+}
