@@ -42,9 +42,14 @@ percli get dashboards -p pp
 percli migrate -f basics/grafana_sample.json --project pp --online -o json > basics/migrated_grafana_sample.json
 percli apply -f basics/migrated_grafana_sample.json
 
-
-percli migrate -f migration/grafana8_mongo_pod.json --project pp --online -o json > migration/new.json
+.
+percli migrate -f grafana8_mongo_pod.json --project pp --online -o json --log.level debug > migrated_grafana_mongo_pod.json
 Error: unable to decode the response body. Error name cannot be empty
+
+If I import this grafana-8 json into grafana-12 ui. Export that, & run migration again, that works:
+percli migrate -f grafana12_mongo_pod.json --project pp --online -o json > migrated_grafana_mongo_pod.json
+percli apply -f migrated_grafana_mongo_pod.json
+
 ```
 
 
