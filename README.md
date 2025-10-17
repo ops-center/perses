@@ -31,7 +31,7 @@ percli whoami
 percli apply -f basics/project.json
 percli get projects
 
-# Create the datasource first
+# Create the datasource first: `global-ds-proxy`
 percli apply -f basics/initial_dashboard.json
 percli get dashboards -p pp
 ```
@@ -52,6 +52,31 @@ percli apply -f migrated_grafana_mongo_pod.json
 
 ```
 
+
+## Process
+```
+cd ~/go/src/go.appscode.dev/grafana-dashboards
+python3 ~/yamls/utils/python/modify1.py
+python3 ~/yamls/utils/python/curl2.py
+python3 ~/yamls/utils/python/revert_modify3.py
+python3 ~/yamls/utils/python/cleanup4.p
+
+
+cd ~/go/src/go.opscenter.dev/perses
+percli migrate -f /home/arnob/go/src/go.appscode.dev/grafana-dashboards/mongodb/mongodb-pod-dashboard-ready.json --project pp --online -o json > test/mongo_pod.json
+percli migrate -f /home/arnob/go/src/go.appscode.dev/grafana-dashboards/mongodb/mongodb-database-replset-dashboard-ready.json --project pp --online -o json > test/mongo_replset.json
+percli migrate -f /home/arnob/go/src/go.appscode.dev/grafana-dashboards/mongodb/mongodb-summary-dashboard-ready.json --project pp --online -o json > test/mongo_summary.json 
+
+
+Changes: (in summary dashboards)
+"color":"text" -> "color":"#c4162a" 
+Remove "mappings" arrays
+
+
+percli apply -f test/mongo_pod.json 
+percli apply -f test/mongo_replset.json 
+percli apply -f test/mongo_summary.json 
+```
 
 ## Clean up
 `docker stop prometheus grafana perses`
