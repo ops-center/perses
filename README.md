@@ -54,14 +54,9 @@ percli apply -f migrated_grafana_mongo_pod.json
 
 
 ## Process
+
+### Manual
 ```
-cd ~/go/src/go.appscode.dev/grafana-dashboards
-python3 ~/yamls/utils/python/modify1.py
-python3 ~/yamls/utils/python/curl2.py
-python3 ~/yamls/utils/python/revert_modify3.py
-python3 ~/yamls/utils/python/cleanup4.p
-
-
 cd ~/go/src/go.opscenter.dev/perses
 percli migrate -f /home/arnob/go/src/go.appscode.dev/grafana-dashboards/mongodb/mongodb-pod-dashboard-ready.json --project pp --online -o json > test/mongo_pod.json
 percli migrate -f /home/arnob/go/src/go.appscode.dev/grafana-dashboards/mongodb/mongodb-database-replset-dashboard-ready.json --project pp --online -o json > test/mongo_replset.json
@@ -76,6 +71,17 @@ Remove "mappings" arrays
 percli apply -f test/mongo_pod.json 
 percli apply -f test/mongo_replset.json 
 percli apply -f test/mongo_summary.json 
+```
+
+### Automated
+```
+cd ~/go/src/go.appscode.dev/grafana-dashboards
+python3 scripts/modify1.py
+python3 scripts/curl2.py
+python3 scripts/revert_modify3.py
+python3 scripts/cleanup4.py
+python3 scripts/migrate5.py
+python3 scripts/mappings6.py # TODO: Has issues ? 
 ```
 
 ## Clean up
