@@ -2,9 +2,8 @@ import os
 import json
 
 # Define the root directory to start traversal
-root_dir = '.'  # Change as needed
+root_dir = '.'  # change as needed
 
-# Function to process and modify JSON files
 def process_file(filepath):
     with open(filepath, 'r') as f:
         data = json.load(f)
@@ -13,14 +12,15 @@ def process_file(filepath):
 
     def modify(obj):
         if isinstance(obj, dict):
-            if 'mappings' in obj and isinstance(obj['mappings'], list):
-                del obj['mappings']
+            # If there is a key "width" with value None, delete it
+            if 'width' in obj and obj['width'] is None:
+                del obj['width']
                 changed[0] = True
-            for k, v in list(obj.items()):
-                if k == 'color' and v == 'text':
-                    obj[k] = '#c4162a'
-                    changed[0] = True
+
+            # Recurse into remaining values
+            for v in list(obj.values()):
                 modify(v)
+
         elif isinstance(obj, list):
             for item in obj:
                 modify(item)

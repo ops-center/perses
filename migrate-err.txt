@@ -1,0 +1,115 @@
+***Redis***
+
+Error processing ./redis_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./redis_shards_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./sentinel_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Postgres***
+
+Error processing ./postgres_pods_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+***MySQL***
+
+Error processing ./mysql_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./mysql_group_replication-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***MariaDB***
+
+Error processing ./mariadb-standard-replication-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: spec.#cellSettings: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./mariadb-summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./mariadb-galera-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***ElasticSearch***
+
+Error processing ./elasticsearch_database_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./elasticsearch_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./elasticsearch_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***RabbitMQ***
+
+Error processing ./rabbitmq-pod-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./rabbitmq-summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***MSSQLServer***
+
+Error processing ./mssqlserver_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./mssqlserver_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Cassandra***
+
+Error processing ./cassandra_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+***ZooKeeper***
+
+Error processing ./zookeeper_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+***Percona***
+
+Error processing ./perconaxtradb-galera-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./perconaxtradb-summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***ProxySQL***
+
+Error processing ./proxysql-summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***SingleStore***
+
+Error processing ./singlestore_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Druid***
+
+Error processing ./druid_pod_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./druid_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Ignite***
+
+Error processing ./ignite_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Memcached***
+
+Error processing ./memcached_summary_dashboard-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+**PGBouncer***
+
+Error processing ./pgbouncer_summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./pgbouncer_pod-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./pgbouncer_database-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+
+***Kafka***
+
+Error processing ./kafka_summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+**PGPool***
+
+Error processing ./pgpool_database-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./pgpool_summary-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
+Error processing ./pgpool_pod-ready.json: Error: something wrong happened with the request to the API.  Message: bad request: unable to convert to Perses panel: 0: error in call to list.FlattenN: invalid operands 1 and "value" to '==' (type int and string) (and 1 more errors) StatusCode: 400
+
