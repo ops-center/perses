@@ -3,35 +3,38 @@
 set -euo pipefail  # Exit on error, unset variables, and pipe failures
 
 FOLDERS=(
-#    cassandra ✓
-#    connectcluster ✓
-#    druid
-#    elasticsearch
-#    ferretdb
-#    hazelcast
-#    ignite
-#    kafka
-#    mariadb
-#    memcached
-#    mongodb ✓
-#    mssqlserver
-#    mysql
-#    pgbouncer
-#    pgpool
+# working
+    cassandra
+    druid
+    elasticsearch
+    ferretdb
+    hazelcast
+    kafka
+    mariadb
+    memcached
+    mongodb
+    mysql
+    pgbouncer
+    pgpool
     postgres
-#    proxysql
-#    rabbitmq
-#    redis
-#    singlestore
-#    solr
-#    zookeeper
+    proxysql
+    rabbitmq
+    redis
+    singlestore
+    solr
+    zookeeper
+    falco
+    kubestash
+    kubevault
+    policy
+    scanner
+    stash
 
-#    falco
-#    kubestash
-#    kubevault
-#    policy
-#    scanner
-#    stash
+# Still issue
+#    connectcluster
+#    ignite
+#    mssqlserver
+
 )
 
 # Colors for nice output
@@ -72,16 +75,24 @@ for folder in "${FOLDERS[@]}"; do
             echo "3. Running revert_modify3.py"
             python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/revert_modify3.py
 
-            echo "4. Running cleanup4.py"
-            python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/cleanup4.py
+            echo "4. Running filecleanup4.py"
+            python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/filecleanup4.py
 
-            echo "5. Running migrate5.py"
-            python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/migrate5.py
+            echo "5. Running cleaning5.py"
+            python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/cleaning5.py
 
-            echo "6. Running mappings6.py"
+            echo "6. Running migrate6.py"
+            if python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/migrate6.py; then
+                echo "Migration succeeded"
+            else
+                echo "Migration failed"
+                exit 1
+            fi
+
+            echo "6b. Running mappings6.py"
             python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/mappings6.py
 
-            echo "6. Running widthnull7.py"
+            echo "7. Running widthnull7.py"
             python3 /home/arnob/go/src/go.opscenter.dev/perses/scripts/widthnull7.py
 
             echo -e "\n${GREEN}✓ All Python scripts completed successfully in $folder${NC}\n"

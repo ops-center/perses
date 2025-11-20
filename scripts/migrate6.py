@@ -1,6 +1,7 @@
 import os
 import subprocess
 import json
+import sys
 
 # Define the root directory to start traversal
 root_dir = '.'  # Change as needed
@@ -34,10 +35,13 @@ def process_file(filepath):
     
     except subprocess.CalledProcessError as e:
         print(f"Error processing {filepath}: {e.stderr}")
+        sys.exit(1)
     except json.JSONDecodeError as e:
         print(f"Error parsing JSON output for {filepath}: {e}")
+        sys.exit(1)
     except Exception as e:
         print(f"Unexpected error processing {filepath}: {e}")
+        sys.exit(1)
 
 # Traverse directories and process JSON files
 for subdir, _, files in os.walk(root_dir):

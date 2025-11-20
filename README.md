@@ -79,9 +79,10 @@ cd ~/go/src/go.opscenter.dev/grafana-dashboards
 python3 scripts/modify1.py
 python3 scripts/curl2.py
 python3 scripts/revert_modify3.py
-python3 scripts/cleanup4.py
-python3 scripts/migrate5.py
-python3 scripts/mappings6.py # TODO: Has issues ? 
+python3 scripts/filecleanup4.py
+python3 scripts/cleaning5.py
+python3 scripts/migrate6.py
+python3 scripts/mappings6.py
 ```
 
 ## Clean up
